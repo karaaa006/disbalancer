@@ -1,0 +1,238 @@
+.footer {
+  position: relative;
+  padding: 46px 5px 5px;
+  background: rgba(15, 3, 50, 0.8);
+  padding: 0 10px;
+
+  @include for-tablet {
+    padding: 46px 43px 19px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-image: url('../images/line2-mob.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include for-tablet {
+      background-image: url('../images/line2-tab.png');
+    }
+
+    @include for-desktop {
+      background-image: url('../images/line2-pc.png');
+      height: 20px;
+    }
+  }
+}
+
+.footer__container {
+  display: grid;
+  grid-template-areas: 'logo' 'nav' 'social';
+  position: relative;
+  align-items: center;
+  justify-items: center;
+
+  @include for-tablet {
+    grid-template-areas: 'logo social' 'nav nav';
+    max-width: 500px;
+    padding: 0;
+    gap: 8px;
+  }
+
+  @include for-desktop {
+    max-width: 1280px;
+  }
+}
+
+.footer__logo {
+  grid-area: logo;
+  width: 220px;
+  margin-bottom: 46px;
+
+  @include for-tablet {
+    margin-bottom: 0;
+    justify-self: flex-start;
+    width: 130px;
+  }
+
+  @include for-desktop {
+    width: 320px;
+  }
+}
+
+.footer__nav {
+  grid-area: nav;
+  font-size: 14px;
+
+  @include for-tablet {
+    font-size: 8px;
+  }
+
+  @include for-desktop {
+    font-size: 14px;
+  }
+}
+
+.footer__social {
+  grid-area: social;
+}
+
+.footer__nav,
+.footer__social {
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: center;
+  border: 2px solid rgba(57, 231, 255, 0.35);
+  border-radius: 5px;
+  padding: 25px 50px;
+  z-index: 0;
+
+  @include for-tablet {
+    padding: 0;
+    border: 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.footer__nav-list {
+  @extend %list-reset;
+
+  @include for-tablet {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+  }
+
+  @include for-desktop {
+    gap: 30px;
+  }
+}
+
+.footer__nav-item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @include for-tablet {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+.footer__nav-link {
+  @extend %link-reset;
+
+  &:hover,
+  &:focus {
+    color: $accent-cl;
+  }
+}
+
+.footer__social-list {
+  @extend %list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  @include for-tablet {
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  @include for-desktop {
+    gap: 20px;
+  }
+}
+
+.footer__social-item {
+  position: relative;
+  width: fit-content;
+  background: linear-gradient(
+    218.53deg,
+    rgba(69, 246, 201, 0.8) 14.36%,
+    rgba(76, 200, 239, 0.8) 94.26%
+  );
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 120%;
+    height: 120%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(
+      218.53deg,
+      rgba(200, 255, 241, 0.85) 14.36%,
+      rgba(161, 130, 250, 0.85) 94.26%
+    );
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.85), 0px 0px 15px rgba(15, 3, 50, 0.8);
+
+    @include for-tablet {
+      box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.85), 0px 0px 5px rgba(15, 3, 50, 0.8);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(218.53deg, rgba(241, 188, 56, 0.8), rgba(238, 122, 48, 0.8));
+
+    &::before {
+      background: linear-gradient(
+        218.53deg,
+        rgba(252, 218, 97, 0.85) 14.36%,
+        rgba(236, 93, 48, 0.85) 94.26%
+      );
+
+      box-shadow: 0px 0px 15px rgba(252, 218, 97, 0.85);
+
+      @include for-tablet {
+        box-shadow: 0px 0px 5px rgba(252, 218, 97, 0.85);
+      }
+    }
+  }
+}
+
+.footer__social-link {
+  @extend %link-reset;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+
+  @include for-tablet {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include for-desktop {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.footer__social-icon {
+  display: block;
+  width: 30px;
+
+  @include for-tablet {
+    width: 11px;
+  }
+
+  @include for-desktop {
+    width: 30px;
+  }
+}

@@ -1,0 +1,10 @@
+.icon-btn {
+  @extend %btn-reset;
+}
+
+.icon-btn--text {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: inherit;
+}

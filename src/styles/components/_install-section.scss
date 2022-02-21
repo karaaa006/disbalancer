@@ -1,0 +1,139 @@
+.install-section {
+  margin-bottom: 33px;
+
+  @include for-desktop {
+    margin-bottom: 150px;
+  }
+}
+
+.install-container {
+  padding: 35px 15px 19px;
+  background-image: url('../images/install-section-mob-bg.jpg');
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border: 2px solid #ff983959;
+
+  @include for-tablet {
+    padding: 40px 50px 12px;
+
+    background-image: url('../images/install-section-bg.jpg');
+  }
+}
+
+.install-title {
+  font-size: 18px;
+  margin: 0 0 49px 0;
+
+  @include for-tablet {
+    margin: 0 0 43px;
+  }
+}
+
+.install-title-hl {
+  position: relative;
+  display: block;
+  font-family: 'AddCityboy', serif;
+  font-size: 64px;
+  line-height: 0.7;
+  text-transform: uppercase;
+  z-index: 0;
+
+  background-image: linear-gradient(#ffa216, #fc3838);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &:before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    text-shadow: 5px 5px 0px rgba(255, 255, 255, 0.2);
+    background: none;
+  }
+
+  //   &:before {
+  //     content: attr(data-text);
+  //     position: absolute;
+  //     left: 0;
+  //     top: 0;
+  //     z-index: 1;
+  //     background-image: linear-gradient(#fc3838, #ffa216);
+  //     -webkit-background-clip: text;
+  //     color: transparent;
+  //   }
+}
+
+.install-subtitle {
+  color: rgba(255, 184, 0, 0.7);
+  font-size: 18px;
+  // max-width: 160px;
+  line-height: 1.4;
+  margin-bottom: 69px;
+
+  @include for-tablet {
+    font-size: 12px;
+    margin-bottom: 13px;
+  }
+}
+
+.install-subtitle-hl {
+  display: block;
+  background-color: rgba(255, 184, 0, 0.7);
+  color: #ffffff;
+  padding: 5px 10px;
+  margin-left: -10px;
+  width: fit-content;
+}
+
+.download-wrap {
+  display: flex;
+  margin-bottom: 17px;
+}
+
+.btn-download {
+  padding: 0;
+  margin-right: 14px;
+  max-width: 264px;
+  background-color: #dc0150;
+  color: #ffffff;
+  padding: 12px 20px;
+
+  @include for-tablet {
+    font-size: 12px;
+    padding: 6px 11px;
+  }
+}
+
+.icon-btn-download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dc0150;
+  width: 50px;
+  aspect-ratio: 1 / 1;
+
+  @include for-tablet {
+    width: 27px;
+  }
+}
+
+.icon-btn__icon {
+  width: 27px;
+  @include for-tablet {
+    width: 15px;
+  }
+}
+
+.install-info {
+  margin: 0;
+  font-family: 'basis33', monospace;
+  font-size: 24px;
+
+  @include for-tablet {
+    max-width: 245px;
+    font-size: 12px;
+  }
+}

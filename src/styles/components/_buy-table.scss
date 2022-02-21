@@ -1,0 +1,151 @@
+.buy-table__wrap {
+  padding: 67px 6px 17px;
+  max-width: calc(100vw - 20px);
+  overflow-y: hidden;
+  overflow-x: visible;
+  background-color: rgba(22, 8, 68, 1);
+  border: 1px solid rgba(57, 231, 255, 0.35);
+  border-radius: 15px;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+
+  @include for-tablet {
+    margin-bottom: 37px;
+    padding: 0;
+    max-width: auto;
+    background-color: transparent;
+    border: none;
+    overflow: visible;
+  }
+}
+
+.buy-table {
+  margin-bottom: 16px;
+  border: 1px solid rgba(57, 231, 255, 0.35);
+  border-radius: 3px;
+  text-align: center;
+  color: $title-cl;
+  border-spacing: 0;
+
+  @include for-tablet {
+    width: 100%;
+  }
+}
+
+.buy-table__head-cell {
+  height: 30px;
+  font-size: 14px;
+
+  text-align: center;
+  border: 0.5px solid rgba(34, 86, 133, 0.35);
+
+  border-top: none;
+
+  &:first-child {
+    padding-left: 25px;
+  }
+
+  &:first-child .buy-table__head-text-wrap {
+    margin: 0;
+  }
+
+  @include for-tablet {
+    height: auto;
+
+    font-size: 9px;
+
+    &:first-child .buy-table__head-text-wrap {
+      margin: auto;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  @include for-desktop {
+    font-size: 14px;
+  }
+}
+
+.buy-table__head-text-wrap {
+  width: fit-content;
+  background: rgba(22, 7, 67, 1);
+  border: 0.5px solid rgba(32, 85, 127, 1);
+  padding: 2px 10px;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  line-height: 1.3;
+}
+
+.buy-table__body-cell {
+  white-space: nowrap;
+  font-size: 14px;
+  padding: 25px;
+  border: 0.5px solid rgba(34, 86, 133, 0.35);
+
+  &:first-child {
+    min-width: 300px;
+  }
+
+  @include for-tablet {
+    white-space: normal;
+    font-size: 10px;
+    padding: 8px;
+
+    &:first-child {
+      min-width: auto;
+    }
+  }
+
+  @include for-desktop {
+    font-size: 14px;
+  }
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+td:first-child {
+  text-align: left;
+  border-left: none;
+
+  @include for-tablet {
+    text-align: center;
+  }
+}
+
+td:last-child {
+  border-right: none;
+}
+
+.buy-table__scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: '';
+    margin-right: 20px;
+    width: 224px;
+    height: 1px;
+    background-color: #ffffff;
+  }
+
+  &::after {
+    content: '';
+    margin-left: 10px;
+    width: 12px;
+    height: 10px;
+    background-image: url('../images/icons/scroll-arrow.svg');
+  }
+
+  @include for-tablet {
+    display: none;
+  }
+}

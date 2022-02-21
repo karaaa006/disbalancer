@@ -1,0 +1,21 @@
+.mob-only {
+  @include for-tablet {
+    display: none;
+  }
+}
+
+.tablet-show-flex {
+  display: none;
+
+  @include for-tablet {
+    display: flex;
+  }
+}
+
+.tablet-show-block {
+  display: none;
+
+  @include for-tablet {
+    display: block;
+  }
+}

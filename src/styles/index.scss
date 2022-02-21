@@ -1,7 +1,18 @@
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter.ttf');
-}
-
-@import 'variables';
-@import 'scaffolding';
+@import './utils/variables';
+@import './utils/fonts';
+@import './utils/mixins';
+@import './utils/placeholders';
+@import './base/base';
+@import './components/section';
+@import './components/btn';
+@import './components/icon-btn';
+@import './components/header';
+@import './components/hero';
+@import './components/join-info';
+@import './components/map';
+@import './components/bridge';
+@import './components/buy-table';
+@import './components/install-section';
+@import './components/footer';
+@import './components/animated-scroll';
+@import './utils/utils-classes';

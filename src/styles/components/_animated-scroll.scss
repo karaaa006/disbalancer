@@ -1,0 +1,17 @@
+.animated-scroll {
+  position: fixed;
+  right: 13px;
+  display: none;
+
+  @include for-tablet {
+    display: block;
+  }
+}
+
+.animated-scroll__img {
+  height: 150px;
+
+  @include for-desktop {
+    height: 312px;
+  }
+}

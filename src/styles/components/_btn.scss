@@ -1,0 +1,96 @@
+.btn {
+  @extend %btn-reset;
+
+  width: 100%;
+  display: block;
+  text-align: center;
+  background-color: $accent-cl;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 15px 5px;
+  cursor: pointer;
+  color: #000000;
+
+  &::before {
+    content: '> ';
+  }
+
+  &--action {
+    color: #ffffff;
+    background-color: #dc0150;
+    font-size: 28px;
+  }
+
+  @include for-tablet {
+    padding: 7px 14px;
+    font-size: 18px;
+    width: fit-content;
+  }
+
+  @include for-desktop {
+    padding: 14px 30px;
+  }
+}
+
+.btn-arrows {
+  @include for-tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after,
+    &::before {
+      content: '';
+      background-image: url('../images/icons/btn-arrows.svg');
+      width: 28px;
+      height: 20px;
+    }
+
+    &::before {
+      transform: rotate(180deg);
+      margin-right: 13px;
+    }
+
+    &::after {
+      margin-left: 13px;
+    }
+
+    &.btn-arrows--red::after {
+      width: 30px;
+      height: 22px;
+      background-image: url('../images/icons/btn-arrows-red.svg');
+    }
+
+    &.btn-arrows--red::before {
+      transform: rotate(180deg);
+      width: 30px;
+      height: 22px;
+      background-image: url('../images/icons/btn-arrows-red.svg');
+    }
+  }
+
+  @include for-desktop {
+    &::after,
+    &::before {
+      content: '';
+      background-size: cover;
+      width: 56px;
+      height: 40px;
+    }
+  }
+}
+
+.btn.btn--table {
+  font-size: 14px;
+  background: rgba(133, 240, 255, 0.3);
+  color: $title-cl;
+  border: 0.5px solid rgba(255, 255, 255, 1);
+
+  @include for-tablet {
+    font-size: 10px;
+  }
+
+  @include for-desktop {
+    padding: 11px 20px;
+  }
+}

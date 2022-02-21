@@ -1,0 +1,107 @@
+[
+    {
+        "name": "Australia",
+        "x": 91,
+        "y": 76
+    },
+    {
+        "name": "Austria",
+        "x": 53,
+        "y": 19
+    },
+    {
+        "name": "China",
+        "x": 80,
+        "y": 27
+    },
+    {
+        "name": "Denmark",
+        "x": 50,
+        "y": 15
+    },
+    {
+        "name": "England",
+        "x": 46,
+        "y": 16
+    },
+    {
+        "name": "France",
+        "x": 47,
+        "y": 20
+    },
+    {
+        "name": "Germany",
+        "x": 49,
+        "y": 19
+    },
+    {
+        "name": "Hungary",
+        "x": 54,
+        "y": 18
+    },
+    {
+        "name": "India",
+        "x": 70,
+        "y": 37
+    },
+    {
+        "name": "Indonesia",
+        "x": 86,
+        "y": 57
+    },
+    {
+        "name": "Latvia",
+        "x": 53,
+        "y": 12
+    },
+    {
+        "name": "Pakistan",
+        "x": 67,
+        "y": 31
+    },
+    {
+        "name": "Romania",
+        "x": 55,
+        "y": 21
+    },
+    {
+        "name": "Slovenia",
+        "x": 52,
+        "y": 18
+    },
+    {
+        "name": "Spain",
+        "x": 46,
+        "y": 24
+    },
+    {
+        "name": "Sweden",
+        "x": 50,
+        "y": 11
+    },
+    {
+        "name": "The Netherlands",
+        "x": 48,
+        "y": 17
+    },
+    {
+        "name": "Turkey",
+        "x": 56,
+        "y": 25
+    },
+    {
+        "name": "Ukraine",
+        "x": 57,
+        "y": 18
+    },
+    {
+        "name": "United States",
+        "x": 18,
+        "y": 24
+    },
+    {
+        "name": "Vietnam",
+        "x": 80,
+        "y": 42
+    }
+]

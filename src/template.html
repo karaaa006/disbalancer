@@ -5,10 +5,460 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>Disbalancer</title>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div class="hero">
+      <header class="header">
+        <div class="header__logo">
+          <img src="<%= require('./images/logo-mob.svg') %>" />
+        </div>
+        <div class="header__mob-menu-btn">
+          <button type="button" class="icon-btn">
+            <img src="<%= require('./images/icons/mob-menu.svg') %>" />
+          </button>
+        </div>
+        <div class="header__tablet-nav">
+          <button class="btn header__btn" type="button">Login</button>
+          <button type="button" class="icon-btn icon-btn--text">
+            Menu
+            <img src="<%= require('./images/icons/tablet-menu.svg') %>" />
+          </button>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a target="_blank" href="#" class="header__nav-link">Home</a>
+            </li>
+            <li class="header__nav-item">
+              <a target="_blank" href="#" class="header__nav-link">For Army</a>
+            </li>
+            <li class="header__nav-item">
+              <a target="_blank" href="#" class="header__nav-link">Buy Token</a>
+            </li>
+            <li class="header__nav-item">
+              <a target="_blank" href="#" class="header__nav-link">Bridge</a>
+            </li>
+            <li class="header__nav-item">
+              <a target="_blank" href="#" class="header__nav-link">Download</a>
+            </li>
+          </ul>
+          <button class="btn header__btn" type="button">Login</button>
+        </nav>
+      </header>
+
+      <div class="hero__socials">
+        <ul class="hero__social-list">
+          <li class="hero__social-item">
+            <a target="_blank" href="https://t.me/disbalancer_group" class="hero__social-link">
+              <img
+                src="<%= require('./images/icons/socials/telegram.svg') %>"
+                alt=""
+                class="hero__social-icon"
+              />
+            </a>
+          </li>
+          <li class="hero__social-item">
+            <a target="_blank" href="mailto:contact@disbalancer.com" class="hero__social-link">
+              <img
+                src="<%= require('./images/icons/socials/mail.svg') %>"
+                alt=""
+                class="hero__social-icon"
+              />
+            </a>
+          </li>
+          <li class="hero__social-item">
+            <a
+              target="_blank"
+              href="https://www.reddit.com/r/disbalancer/"
+              class="hero__social-link"
+            >
+              <img
+                src="<%= require('./images/icons/socials/reddit.svg') %>"
+                alt=""
+                class="hero__social-icon"
+              />
+            </a>
+          </li>
+          <li class="hero__social-item">
+            <a target="_blank" href="https://github.com/thedisbalancer" class="hero__social-link">
+              <img
+                src="<%= require('./images/icons/socials/github.svg') %>"
+                alt=""
+                class="hero__social-icon"
+              />
+            </a>
+          </li>
+          <li class="hero__social-item">
+            <a target="_blank" href="https://twitter.com/thedisbalancer" class="hero__social-link">
+              <img
+                src="<%= require('./images/icons/socials/twitter.svg') %>"
+                alt=""
+                class="hero__social-icon"
+              />
+            </a>
+          </li>
+          <li class="hero__social-item">
+            <a
+              target="_blank"
+              href="https://www.coingecko.com/en/coins/disbalancer"
+              class="hero__social-link"
+            >
+              <img
+                src="<%= require('./images/icons/socials/coingecko.svg') %>"
+                alt=""
+                class="hero__social-icon"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="hero__title-wrap">
+        <img src="<%= require('./images/hero-title.png') %>" alt="" class="hero__title-mob" />
+        <img
+          src="<%= require('./images/hero-title-tablet.png') %>"
+          alt=""
+          class="hero__title-tablet"
+        />
+      </div>
+      <p class="hero__text">
+        Earn DDoS tokens by allowing your device to work on a global mission — making the world a
+        safer place
+      </p>
+      <div class="btn-arrows"><button class="btn" type="button">join army</button></div>
+    </div>
+    <section class="section how-join__section">
+      <div class="how-join__logo-wrap mob-only">
+        <img
+          src="<%= require('./images/logo-mob.svg') %>"
+          alt="Disbalancer logo"
+          class="how-join__logo"
+        />
+      </div>
+      <div class="container">
+        <h2 class="section__title mob-only">
+          how to join the <br />
+          cyber army
+        </h2>
+        <div class="how-join__title-wrap">
+          <div class="how-join__title-img">
+            <img
+              src="<%= require('./images/logo-blue.svg') %>"
+              alt="Disbalancer logo"
+              class="how-join__logo"
+            />
+          </div>
+          <h2 class="how-join__title-text">how to join the cyber army</h2>
+        </div>
+        <p class="section__text">
+          There are many applications submitted. We are making the main focus on the geographic
+          location of your node. As of now, our samurais are representing the following countries:
+        </p>
+        <div class="btn-arrows">
+          <a
+            target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfUIUigF-LwXXjfDoOfPp2dBq0mChvcbeHIDcP23gf8aok0vA/viewform"
+            class="btn"
+            >Fill out the form</a
+          >
+        </div>
+
+        <div class="map">
+          <div class="delimiter map__delimiter"></div>
+          <div class="map__nav-btns">
+            <button class="map__nav-btn" type="button">+</button>
+            <button class="map__nav-btn" type="button">-</button>
+          </div>
+          <div class="map__wrap">
+            <img src="<%= require('./images/map/map.svg') %>" alt="Map" class="map__img" />
+          </div>
+          <div class="map__list-wrap">
+            <ul class="map__list"></ul>
+          </div>
+        </div>
+        <div class="how-join__info">
+          <h3 class="how-join__info-title mob-only">
+            how to join the <br />
+            cyber army
+          </h3>
+          <h3 class="how-join__info-title tablet-show-flex">
+            Haven’t found your <br />
+            country in this list?
+          </h3>
+          <p class="section__text">
+            That’s great for you! You have a high chance to join our army during the next
+            mobilization.
+          </p>
+
+          <p class="section__text">
+            If you live in one of the countries mentioned above, don’t worry. We are interested in
+            generating a strong computing power and high-speed Internet. We appreciate the following
+            2 characteristics of our future samurais: your ability to stay online and your belief in
+            our product (DDOS tokens are among your favourite virtual assets? Then your chances are
+            high)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="delimiter"></div>
+
+    <section class="section">
+      <div class="container">
+        <div class="bridge">
+          <img
+            src="<%= require('./images/samurai.png') %>"
+            alt="Samurai"
+            class="bridge__samurai mob-only"
+          />
+          <img
+            src="<%= require('./images/samurai-tablet.png') %>"
+            alt="Samurai"
+            class="bridge__samurai tablet-show-block"
+          />
+          <div class="container">
+            <div class="bridge__text">
+              <span class="bridge__text-hl">Connect</span>
+              your crypto wallet <br />
+              and start earning
+            </div>
+            <div class="bridge__go-to">
+              <div class="btn-arrows btn-arrows--red">
+                <button class="btn btn--action btn-bridge">go to bridge</button>
+              </div>
+              <div class="bridge__coin bridge__coin--eth">
+                <span class="bridge__coin-name">Ethereum</span
+                ><img
+                  src="<%= require('./images/eth-logo.svg') %>"
+                  alt="Ethereum logo"
+                  class="coin-logo"
+                />
+              </div>
+              <div class="bridge__coin bridge__coin--bsc">
+                <span class="bridge__coin-name">BSC</span
+                ><img
+                  src="<%= require('./images/bsc-logo.svg') %>"
+                  alt="BSC logo"
+                  class="coin-logo"
+                />
+                <!-- <div class="bridge__coins">
+              
+              </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="delimiter"></div>
+    <section class="section">
+      <div class="container">
+        <div class="buy-table__wrap">
+          <table class="buy-table">
+            <tr>
+              <th class="buy-table__head-cell">
+                <div class="buy-table__head-text-wrap">Echange</div>
+              </th>
+              <th class="buy-table__head-cell">
+                <div class="buy-table__head-text-wrap">Pairs</div>
+              </th>
+              <th class="buy-table__head-cell">
+                <div class="buy-table__head-text-wrap">Price</div>
+              </th>
+              <th class="buy-table__head-cell">
+                <div class="buy-table__head-text-wrap">Volume</div>
+              </th>
+              <th class="buy-table__head-cell">
+                <div class="buy-table__head-text-wrap">Volume,%</div>
+              </th>
+            </tr>
+            <tr>
+              <td class="buy-table__body-cell">Gate.io</td>
+              <td class="buy-table__body-cell">DDOS/USDT</td>
+              <td class="buy-table__body-cell">$0.401175</td>
+              <td class="buy-table__body-cell">$32,056</td>
+              <td class="buy-table__body-cell">?</td>
+              <td class="buy-table__body-cell">
+                <button type="button" class="btn btn--table">Buy DDOS</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="buy-table__body-cell">Pancakeswap (V2)</td>
+              <td class="buy-table__body-cell">DDOS/ETH Info</td>
+              <td class="buy-table__body-cell">$0.401175</td>
+              <td class="buy-table__body-cell">$7,530</td>
+              <td class="buy-table__body-cell">?</td>
+              <td class="buy-table__body-cell">
+                <button type="button" class="btn btn--table">Buy DDOS</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="buy-table__body-cell">uniswap (V2)</td>
+              <td class="buy-table__body-cell">DDOS/USDT</td>
+              <td class="buy-table__body-cell">$0.401175</td>
+              <td class="buy-table__body-cell">$32,056</td>
+              <td class="buy-table__body-cell">?</td>
+              <td class="buy-table__body-cell">
+                <button type="button" class="btn btn--table">Buy DDOS</button>
+              </td>
+            </tr>
+          </table>
+          <div class="buy-table__scroll">Scroll</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="delimiter"></div>
+
+    <section class="section install-section">
+      <div class="container install-container">
+        <h2 class="install-title">
+          Install <br />
+          <span class="install-title-hl" data-text="Dis balancer">Dis balancer</span> <br />
+          on your device
+        </h2>
+        <p class="install-subtitle mob-only">
+          and start <span class="install-subtitle-hl">earning</span> DDoS tokens <br />
+          today!
+        </p>
+        <p class="install-subtitle tablet-show-block">
+          and start
+          <span class="install-subtitle-hl">earning DDoS tokens</span> today!
+        </p>
+        <div class="download-wrap">
+          <button class="btn btn-action btn-download">Download</button>
+          <button class="icon-btn icon-btn-download">
+            <img
+              src="<%= require('./images/icons/download-icon.svg') %>"
+              alt="Download icon"
+              class="icon-btn__icon"
+            />
+          </button>
+        </div>
+        <p class="install-info">
+          Currently our application is available only to selected samurais. But the time when
+          everyone will be able to use our application is fast approaching.
+        </p>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container container">
+        <img
+          src="<%= require('./images/logo-mob.svg') %>"
+          alt="Disbalancer logo"
+          class="footer__logo"
+        />
+        <div class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a target="_blank" href="https://disbalancer.com/services/" class="footer__nav-link"
+                >For Bussiness</a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a target="_blank" href="#" class="footer__nav-link">For Army</a>
+            </li>
+            <li class="footer__nav-item">
+              <a target="_blank" href="https://bridge.disbalancer.com/" class="footer__nav-link"
+                >Bridge</a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a target="_blank" href="https://disbalancer.com/about/" class="footer__nav-link"
+                >About</a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a target="_blank" href="https://disbalancer.com/contact/" class="footer__nav-link"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__social">
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a target="_blank" href="https://t.me/disbalancer_group" class="footer__social-link">
+                <img
+                  src="<%= require('./images/icons/socials/telegram.svg') %>"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a target="_blank" href="mailto:contact@disbalancer.com" class="footer__social-link">
+                <img
+                  src="<%= require('./images/icons/socials/mail.svg') %>"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a
+                target="_blank"
+                href="https://www.reddit.com/r/disbalancer/"
+                class="footer__social-link"
+              >
+                <img
+                  src="<%= require('./images/icons/socials/reddit.svg') %>"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a
+                target="_blank"
+                href="https://github.com/thedisbalancer"
+                class="footer__social-link"
+              >
+                <img
+                  src="<%= require('./images/icons/socials/github.svg') %>"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a
+                target="_blank"
+                href="https://twitter.com/thedisbalancer"
+                class="footer__social-link"
+              >
+                <img
+                  src="<%= require('./images/icons/socials/twitter.svg') %>"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a
+                target="_blank"
+                href="https://www.coingecko.com/en/coins/disbalancer"
+                class="footer__social-link"
+              >
+                <img
+                  src="<%= require('./images/icons/socials/coingecko.svg') %>"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="animated-scroll">
+      <img
+        src="<%= require('./images/animated-scroll.png') %>"
+        alt="Scroll"
+        class="animated-scroll__img"
+      />
+    </div>
   </body>
 </html>

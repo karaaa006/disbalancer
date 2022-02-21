@@ -1,0 +1,19 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $text-cl;
+  font-family: $main-font;
+  background-image: url('../images/site-bg.jpg');
+}
