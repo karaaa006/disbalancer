@@ -6,7 +6,7 @@
   }
 }
 
-.install-container {
+.install__container {
   padding: 35px 15px 19px;
   background-image: url('../images/install-section-mob-bg.jpg');
   background-position: center right;
@@ -17,6 +17,12 @@
 
   @include for-tablet {
     padding: 40px 50px 12px;
+
+    background-image: url('../images/install-section-bg.jpg');
+  }
+
+  @include for-tablet {
+    padding: 75px 85px 48px;
 
     background-image: url('../images/install-section-bg.jpg');
   }
@@ -77,6 +83,11 @@
     font-size: 12px;
     margin-bottom: 13px;
   }
+
+  @include for-desktop {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
 }
 
 .install-subtitle-hl {
@@ -91,6 +102,10 @@
 .download-wrap {
   display: flex;
   margin-bottom: 17px;
+
+  @include for-desktop {
+    margin-bottom: 29px;
+  }
 }
 
 .btn-download {
@@ -105,6 +120,10 @@
     font-size: 12px;
     padding: 6px 11px;
   }
+
+  @include for-desktop {
+    font-size: 28px;
+  }
 }
 
 .icon-btn-download {
@@ -118,12 +137,21 @@
   @include for-tablet {
     width: 27px;
   }
+
+  @include for-desktop {
+    width: 50px;
+  }
 }
 
 .icon-btn__icon {
   width: 27px;
+
   @include for-tablet {
     width: 15px;
+  }
+
+  @include for-tablet {
+    width: 27px;
   }
 }
 
@@ -135,5 +163,10 @@
   @include for-tablet {
     max-width: 245px;
     font-size: 12px;
+  }
+
+  @include for-desktop {
+    max-width: 460px;
+    font-size: 18px;
   }
 }

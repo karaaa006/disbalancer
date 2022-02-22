@@ -29,19 +29,19 @@
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a target="_blank" href="#" class="header__nav-link">Home</a>
+              <a href="#for-army" class="header__nav-link">Home</a>
             </li>
             <li class="header__nav-item">
-              <a target="_blank" href="#" class="header__nav-link">For Army</a>
+              <a href="#for-army" class="header__nav-link">For Army</a>
             </li>
             <li class="header__nav-item">
-              <a target="_blank" href="#" class="header__nav-link">Buy Token</a>
+              <a href="#buy" class="header__nav-link">Buy Token</a>
             </li>
             <li class="header__nav-item">
-              <a target="_blank" href="#" class="header__nav-link">Bridge</a>
+              <a href="#bridge" class="header__nav-link">Bridge</a>
             </li>
             <li class="header__nav-item">
-              <a target="_blank" href="#" class="header__nav-link">Download</a>
+              <a href="#install" class="header__nav-link">Download</a>
             </li>
           </ul>
           <button class="btn header__btn" type="button">Login</button>
@@ -54,7 +54,7 @@
             <a target="_blank" href="https://t.me/disbalancer_group" class="hero__social-link">
               <img
                 src="<%= require('./images/icons/socials/telegram.svg') %>"
-                alt=""
+                alt="Telegram logo"
                 class="hero__social-icon"
               />
             </a>
@@ -63,7 +63,7 @@
             <a target="_blank" href="mailto:contact@disbalancer.com" class="hero__social-link">
               <img
                 src="<%= require('./images/icons/socials/mail.svg') %>"
-                alt=""
+                alt="Mail icon"
                 class="hero__social-icon"
               />
             </a>
@@ -76,7 +76,7 @@
             >
               <img
                 src="<%= require('./images/icons/socials/reddit.svg') %>"
-                alt=""
+                alt="Reddit logo"
                 class="hero__social-icon"
               />
             </a>
@@ -85,7 +85,7 @@
             <a target="_blank" href="https://github.com/thedisbalancer" class="hero__social-link">
               <img
                 src="<%= require('./images/icons/socials/github.svg') %>"
-                alt=""
+                alt="Github logo"
                 class="hero__social-icon"
               />
             </a>
@@ -94,7 +94,7 @@
             <a target="_blank" href="https://twitter.com/thedisbalancer" class="hero__social-link">
               <img
                 src="<%= require('./images/icons/socials/twitter.svg') %>"
-                alt=""
+                alt="Twitter logo"
                 class="hero__social-icon"
               />
             </a>
@@ -107,28 +107,43 @@
             >
               <img
                 src="<%= require('./images/icons/socials/coingecko.svg') %>"
-                alt=""
+                alt="Coingeco logo"
                 class="hero__social-icon"
               />
             </a>
           </li>
         </ul>
       </div>
-      <div class="hero__title-wrap">
-        <img src="<%= require('./images/hero-title.png') %>" alt="" class="hero__title-mob" />
-        <img
-          src="<%= require('./images/hero-title-tablet.png') %>"
-          alt=""
-          class="hero__title-tablet"
-        />
-      </div>
-      <p class="hero__text">
-        Earn DDoS tokens by allowing your device to work on a global mission — making the world a
-        safer place
-      </p>
-      <div class="btn-arrows"><button class="btn" type="button">join army</button></div>
+      <section id="for-army" class="section hero__section">
+        <h1 class="visually-hidden">Join the mostpowerful cyber army ever</h1>
+        <div class="hero__title-wrap">
+          <img
+            src="<%= require('./images/hero-title.png') %>"
+            alt="Join the mostpowerful cyber army ever"
+            class="hero__title-mob"
+          />
+          <img
+            src="<%= require('./images/hero-title-tablet.png') %>"
+            alt="Join the mostpowerful cyber army ever"
+            class="hero__title-tablet"
+          />
+        </div>
+        <p class="hero__text">
+          Earn DDoS tokens by allowing your device to work on a global mission — making the world a
+          safer place
+        </p>
+        <div class="btn-arrows">
+          <a
+            target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfUIUigF-LwXXjfDoOfPp2dBq0mChvcbeHIDcP23gf8aok0vA/viewform"
+            class="btn"
+            >join army</a
+          >
+        </div>
+      </section>
     </div>
-    <section class="section how-join__section">
+
+    <section id="join" class="section how-join__section">
       <div class="how-join__logo-wrap mob-only">
         <img
           src="<%= require('./images/logo-mob.svg') %>"
@@ -204,7 +219,8 @@
 
     <div class="delimiter"></div>
 
-    <section class="section">
+    <section id="bridge" class="section">
+      <h2 class="visually-hidden">Disbalancer bridge</h2>
       <div class="container">
         <div class="bridge">
           <img
@@ -225,7 +241,12 @@
             </div>
             <div class="bridge__go-to">
               <div class="btn-arrows btn-arrows--red">
-                <button class="btn btn--action btn-bridge">go to bridge</button>
+                <a
+                  target="_blank"
+                  href="https://bridge.disbalancer.com/"
+                  class="btn btn--action btn-bridge"
+                  >go to bridge</a
+                >
               </div>
               <div class="bridge__coin bridge__coin--eth">
                 <span class="bridge__coin-name">Ethereum</span
@@ -242,9 +263,6 @@
                   alt="BSC logo"
                   class="coin-logo"
                 />
-                <!-- <div class="bridge__coins">
-              
-              </div> -->
               </div>
             </div>
           </div>
@@ -253,7 +271,9 @@
     </section>
 
     <div class="delimiter"></div>
-    <section class="section">
+
+    <section id="buy" class="section">
+      <h2 class="visually-hidden">Buy coin</h2>
       <div class="container">
         <div class="buy-table__wrap">
           <table class="buy-table">
@@ -281,7 +301,12 @@
               <td class="buy-table__body-cell">$32,056</td>
               <td class="buy-table__body-cell">?</td>
               <td class="buy-table__body-cell">
-                <button type="button" class="btn btn--table">Buy DDOS</button>
+                <a
+                  target="_blank"
+                  href="https://www.gate.io/ru/trade/DDOS_USDT"
+                  class="btn btn--table"
+                  >Buy DDOS</a
+                >
               </td>
             </tr>
             <tr>
@@ -291,7 +316,12 @@
               <td class="buy-table__body-cell">$7,530</td>
               <td class="buy-table__body-cell">?</td>
               <td class="buy-table__body-cell">
-                <button type="button" class="btn btn--table">Buy DDOS</button>
+                <a
+                  target="_blank"
+                  href="https://pancakeswap.finance/swap?inputCurrency=0x7fbec0bb6a7152e77c30d005b5d49cbc08a602c3&outputCurrency=0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
+                  class="btn btn--table"
+                  >Buy DDOS</a
+                >
               </td>
             </tr>
             <tr>
@@ -301,7 +331,12 @@
               <td class="buy-table__body-cell">$32,056</td>
               <td class="buy-table__body-cell">?</td>
               <td class="buy-table__body-cell">
-                <button type="button" class="btn btn--table">Buy DDOS</button>
+                <a
+                  target="_blank"
+                  href="https://app.uniswap.org/#/swap?inputCurrency=0x7fbec0bb6a7152e77c30d005b5d49cbc08a602c3&outputCurrency=ETH&chain=mainnet"
+                  class="btn btn--table"
+                  >Buy DDOS</a
+                >
               </td>
             </tr>
           </table>
@@ -312,8 +347,9 @@
 
     <div class="delimiter"></div>
 
-    <section class="section install-section">
-      <div class="container install-container">
+    <section id="install" class="section install-section">
+      <h2 class="visually-hidden">Install Desbalancer on your device</h2>
+      <div class="container install__container">
         <h2 class="install-title">
           Install <br />
           <span class="install-title-hl" data-text="Dis balancer">Dis balancer</span> <br />
@@ -358,7 +394,7 @@
               >
             </li>
             <li class="footer__nav-item">
-              <a target="_blank" href="#" class="footer__nav-link">For Army</a>
+              <a href="#for-army" class="footer__nav-link">For Army</a>
             </li>
             <li class="footer__nav-item">
               <a target="_blank" href="https://bridge.disbalancer.com/" class="footer__nav-link"
@@ -383,7 +419,7 @@
               <a target="_blank" href="https://t.me/disbalancer_group" class="footer__social-link">
                 <img
                   src="<%= require('./images/icons/socials/telegram.svg') %>"
-                  alt=""
+                  alt="Telegram logo"
                   class="footer__social-icon"
                 />
               </a>
@@ -392,7 +428,7 @@
               <a target="_blank" href="mailto:contact@disbalancer.com" class="footer__social-link">
                 <img
                   src="<%= require('./images/icons/socials/mail.svg') %>"
-                  alt=""
+                  alt="Mail icon"
                   class="footer__social-icon"
                 />
               </a>
@@ -405,7 +441,7 @@
               >
                 <img
                   src="<%= require('./images/icons/socials/reddit.svg') %>"
-                  alt=""
+                  alt="Reddit logo"
                   class="footer__social-icon"
                 />
               </a>
@@ -418,7 +454,7 @@
               >
                 <img
                   src="<%= require('./images/icons/socials/github.svg') %>"
-                  alt=""
+                  alt="Github logo"
                   class="footer__social-icon"
                 />
               </a>
@@ -431,7 +467,7 @@
               >
                 <img
                   src="<%= require('./images/icons/socials/twitter.svg') %>"
-                  alt=""
+                  alt="Twitter logo"
                   class="footer__social-icon"
                 />
               </a>
@@ -444,7 +480,7 @@
               >
                 <img
                   src="<%= require('./images/icons/socials/coingecko.svg') %>"
-                  alt=""
+                  alt="Coingecko logo"
                   class="footer__social-icon"
                 />
               </a>

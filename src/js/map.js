@@ -20,12 +20,14 @@ export const map = function ({ mapWrapSelector, listSelector, coords }) {
     list.appendChild(li)
 
     div.addEventListener('click', (e) => {
-      document.querySelectorAll('.map__place').forEach((i) => i.classList.remove('active', 'left'))
+      document
+        .querySelectorAll('.map__place')
+        .forEach((i) => i.classList.remove('active', 'active--left'))
       document.querySelectorAll('.map__list-item').forEach((i) => i.classList.remove('active'))
 
       div.classList.toggle('active')
       li.classList.toggle('active')
-      if (div.offsetLeft > window.innerWidth / 2) div.classList.toggle('left')
+      if (div.offsetLeft > window.innerWidth / 2) div.classList.toggle('active--left')
     })
   })
 }

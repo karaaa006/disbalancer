@@ -85,6 +85,7 @@
   background: rgba(133, 240, 255, 0.3);
   color: $title-cl;
   border: 0.5px solid rgba(255, 255, 255, 1);
+  margin: 0 auto;
 
   @include for-tablet {
     font-size: 10px;
