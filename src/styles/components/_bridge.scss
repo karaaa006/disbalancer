@@ -2,10 +2,10 @@
   border: 2px solid rgba(255, 57, 223, 0.35);
   border-radius: 10px;
   background-image: url('../images/bridge-bg.jpg');
-  background-position: center;
+  background-position: left;
   background-size: cover;
   margin-top: 100px;
-  padding-bottom: 60px;
+  padding: 0 25px 60px;
 
   @include for-tablet {
     margin-bottom: 30px;
@@ -23,7 +23,6 @@
 }
 
 .bridge__text {
-  // margin-top: -50px;
   margin-bottom: 40px;
   font-size: 18px;
   text-align: center;
@@ -72,17 +71,9 @@
   @include for-tablet {
     grid-template-areas: 'eth btn bsc';
     gap: 0 6px;
-    grid-auto-columns: 1fr 2fr 1fr;
+    grid-auto-columns: 1fr max-content 1fr;
   }
 }
-
-// .btn-bridge {
-//   margin-bottom: 14px;
-
-//   @include for-tablet {
-//     margin: 0;
-//   }
-// }
 
 .btn-arrows {
   grid-area: btn;
@@ -108,6 +99,13 @@
 
 .bridge__coin--bsc {
   grid-area: bsc;
+  display: flex;
+
+  @include for-tablet {
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 15px;
+  }
 }
 
 .bridge__coin-name {

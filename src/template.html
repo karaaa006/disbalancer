@@ -15,15 +15,15 @@
           <img src="<%= require('./images/logo-mob.svg') %>" />
         </div>
         <div class="header__mob-menu-btn">
-          <button type="button" class="icon-btn">
-            <img src="<%= require('./images/icons/mob-menu.svg') %>" />
+          <button type="button" class="icon-btn" data-toggle-menu>
+            <img src="<%= require('./images/icons/mob-menu.svg') %>" alt="Menu icon" />
           </button>
         </div>
         <div class="header__tablet-nav">
           <button class="btn header__btn" type="button">Login</button>
-          <button type="button" class="icon-btn icon-btn--text">
+          <button type="button" class="icon-btn icon-btn--text" data-toggle-menu>
             Menu
-            <img src="<%= require('./images/icons/tablet-menu.svg') %>" />
+            <img src="<%= require('./images/icons/tablet-menu.svg') %>" alt="Menu icon" />
           </button>
         </div>
         <nav class="header__nav">
@@ -44,8 +44,30 @@
               <a href="#install" class="header__nav-link">Download</a>
             </li>
           </ul>
-          <button class="btn header__btn" type="button">Login</button>
         </nav>
+        <button class="btn header__btn header__btn--desktop" type="button">Login</button>
+        <div class="mob-nav">
+          <button class="icon-btn mob-nav__icon-btn" data-toggle-menu>Close</button>
+          <nav class="mob-nav__wrap">
+            <ul class="mob-nav__list">
+              <li class="mob-nav__item">
+                <a href="#for-army" class="mob-nav__link">Home</a>
+              </li>
+              <li class="mob-nav__item">
+                <a href="#for-army" class="mob-nav__link">For Army</a>
+              </li>
+              <li class="mob-nav__item">
+                <a href="#buy" class="mob-nav__link">Buy Token</a>
+              </li>
+              <li class="mob-nav__item">
+                <a href="#bridge" class="mob-nav__link">Bridge</a>
+              </li>
+              <li class="mob-nav__item">
+                <a href="#install" class="mob-nav__link">Download</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <div class="hero__socials">
@@ -121,11 +143,13 @@
             src="<%= require('./images/hero-title.png') %>"
             alt="Join the mostpowerful cyber army ever"
             class="hero__title-mob"
+            aria-label="Join the mostpowerful cyber army ever"
           />
           <img
             src="<%= require('./images/hero-title-tablet.png') %>"
             alt="Join the mostpowerful cyber army ever"
             class="hero__title-tablet"
+            aria-label="Join the mostpowerful cyber army ever"
           />
         </div>
         <p class="hero__text">
@@ -347,21 +371,34 @@
 
     <div class="delimiter"></div>
 
-    <section id="install" class="section install-section">
+    <section id="install" class="section install">
       <h2 class="visually-hidden">Install Desbalancer on your device</h2>
       <div class="container install__container">
-        <h2 class="install-title">
-          Install <br />
-          <span class="install-title-hl" data-text="Dis balancer">Dis balancer</span> <br />
-          on your device
-        </h2>
-        <p class="install-subtitle mob-only">
-          and start <span class="install-subtitle-hl">earning</span> DDoS tokens <br />
+        <div class="install__title">
+          <div class="install__title-text install__title-text--top">install</div>
+          <div class="install__title-img">
+            <img
+              src="<%= require('./images/disbalancer-install-text.png') %>"
+              alt="Disbalancer"
+              class="mob-only"
+              aria-label="Disbalancer"
+            />
+            <img
+              src="<%= require('./images/disbalancer-install-text-big.png') %>"
+              alt="Disbalancer"
+              class="tablet-show-block"
+              aria-label="Disbalancer"
+            />
+          </div>
+          <div class="install__title-text install__title-text--bottom">on your device</div>
+        </div>
+        <p class="install__subtitle mob-only">
+          and start <span class="install__subtitle-hl">earning</span> DDoS tokens <br />
           today!
         </p>
-        <p class="install-subtitle tablet-show-block">
+        <p class="install__subtitle tablet-show-block">
           and start
-          <span class="install-subtitle-hl">earning DDoS tokens</span> today!
+          <span class="install__subtitle-hl">earning DDoS tokens</span> today!
         </p>
         <div class="download-wrap">
           <button class="btn btn-action btn-download">Download</button>
@@ -373,7 +410,7 @@
             />
           </button>
         </div>
-        <p class="install-info">
+        <p class="install__info">
           Currently our application is available only to selected samurais. But the time when
           everyone will be able to use our application is fast approaching.
         </p>

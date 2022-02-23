@@ -1,4 +1,4 @@
-.install-section {
+.install {
   margin-bottom: 33px;
 
   @include for-desktop {
@@ -28,54 +28,62 @@
   }
 }
 
-.install-title {
+.install__title {
   font-size: 18px;
   margin: 0 0 49px 0;
 
   @include for-tablet {
     margin: 0 0 43px;
   }
+
+  @include for-tablet {
+    margin: 0 0 80px;
+  }
 }
 
-.install-title-hl {
-  position: relative;
-  display: block;
-  font-family: 'AddCityboy', serif;
-  font-size: 64px;
-  line-height: 0.7;
-  text-transform: uppercase;
-  z-index: 0;
-
-  background-image: linear-gradient(#ffa216, #fc3838);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  &:before {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    text-shadow: 5px 5px 0px rgba(255, 255, 255, 0.2);
-    background: none;
+.install__title-text {
+  &.install__title-text--top {
+    margin-bottom: 15px;
   }
 
-  //   &:before {
-  //     content: attr(data-text);
-  //     position: absolute;
-  //     left: 0;
-  //     top: 0;
-  //     z-index: 1;
-  //     background-image: linear-gradient(#fc3838, #ffa216);
-  //     -webkit-background-clip: text;
-  //     color: transparent;
-  //   }
+  @include for-tablet {
+    &.install__title-text--top {
+      margin-bottom: 5px;
+
+      color: #ffb951;
+    }
+
+    &.install__title-text--bottom {
+      color: #ff4550;
+    }
+  }
 }
 
-.install-subtitle {
-  color: rgba(255, 184, 0, 0.7);
+.install__title-img {
+  margin-bottom: 15px;
+
+  & img {
+    transform: translateX(-10px);
+  }
+
+  @include for-tablet {
+    margin-bottom: 5px;
+
+    & img {
+      width: 400px;
+    }
+  }
+
+  @include for-desktop {
+    & img {
+      width: 755px;
+    }
+  }
+}
+
+.install__subtitle {
+  color: #ffb800;
   font-size: 18px;
-  // max-width: 160px;
   line-height: 1.4;
   margin-bottom: 69px;
 
@@ -90,7 +98,7 @@
   }
 }
 
-.install-subtitle-hl {
+.install__subtitle-hl {
   display: block;
   background-color: rgba(255, 184, 0, 0.7);
   color: #ffffff;
@@ -150,12 +158,12 @@
     width: 15px;
   }
 
-  @include for-tablet {
+  @include for-desktop {
     width: 27px;
   }
 }
 
-.install-info {
+.install__info {
   margin: 0;
   font-family: 'basis33', monospace;
   font-size: 24px;
