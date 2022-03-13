@@ -4,7 +4,7 @@
     url('../images/header-bg.png');
   background-size: cover;
   background-position: center;
-  padding: 20px 20px 135px;
+  padding: 20px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -33,11 +33,13 @@
   }
 
   @include for-tablet {
-    padding: 18px 23px 75px;
+    padding: 18px 23px;
   }
 }
 
 .hero__section {
+  position: relative;
+
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -89,64 +91,67 @@
 
 .hero__socials {
   display: none;
-  width: 100%;
+  height: 100%;
+  position: absolute;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(50px);
 
   @include for-tablet {
-    display: block;
+    display: flex;
   }
 }
 
 .hero__social-list {
   @extend %list-reset;
-  position: absolute;
 
   display: flex;
   flex-direction: column;
   gap: 24px;
 
   @include for-tablet {
-    // justify-content: flex-end;
+    gap: 16px;
+  }
+
+  @include for-desktop {
+    gap: 42px;
   }
 }
 
 .hero__social-item {
-  position: relative;
-  width: fit-content;
+  display: block;
+  top: 50%;
+  left: 50%;
+  padding: 4px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-45deg);
   background: linear-gradient(
     218.53deg,
-    rgba(69, 246, 201, 0.8) 14.36%,
-    rgba(76, 200, 239, 0.8) 94.26%
+    rgba(200, 255, 241, 0.85) 14.36%,
+    rgba(161, 130, 250, 0.85) 94.26%
   );
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.85), 0px 0px 15px rgba(15, 3, 50, 0.8);
 
-  transform: rotate(45deg);
+  @include for-tablet {
+    width: 21px;
+    height: 21px;
+    padding: 2px;
 
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: -1;
-    width: 120%;
-    height: 120%;
-    transform: translate(-50%, -50%);
-    background: linear-gradient(
-      218.53deg,
-      rgba(200, 255, 241, 0.85) 14.36%,
-      rgba(161, 130, 250, 0.85) 94.26%
-    );
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.85), 0px 0px 15px rgba(15, 3, 50, 0.8);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.85), 0px 0px 15px rgba(15, 3, 50, 0.8);
+  }
 
-    @include for-tablet {
-      box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.85), 0px 0px 15px rgba(15, 3, 50, 0.8);
-    }
+  @include for-desktop {
+    width: 50px;
+    height: 50px;
+    padding: 4px;
   }
 
   &:hover,
   &:focus {
     background: linear-gradient(218.53deg, rgba(241, 188, 56, 0.8), rgba(238, 122, 48, 0.8));
 
-    &::before {
+    & .hero__social-link {
       background: linear-gradient(
         218.53deg,
         rgba(252, 218, 97, 0.85) 14.36%,
@@ -169,22 +174,26 @@
   justify-content: center;
   align-items: center;
 
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
 
-  @include for-tablet {
-    width: 20px;
-    height: 20px;
-  }
+  background: linear-gradient(
+    218.53deg,
+    rgba(69, 246, 201, 0.8) 14.36%,
+    rgba(76, 200, 239, 0.8) 94.26%
+  );
 }
 
 .hero__social-icon {
   display: block;
-  width: 30px;
 
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
 
   @include for-tablet {
     width: 11px;
+  }
+
+  @include for-desktop {
+    width: 30px;
   }
 }

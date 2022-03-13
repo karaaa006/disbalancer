@@ -1,3 +1,12 @@
+.main {
+  background-image: url('../images/site-bg.jpg');
+  background-size: cover;
+
+  @include for-tablet {
+    background-image: url('../images/site-tablet-bg.jpg');
+  }
+}
+
 .section {
   padding: 0 10px;
 

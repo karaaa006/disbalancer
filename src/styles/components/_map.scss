@@ -94,11 +94,37 @@
       }
     }
 
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      width: 2px;
+      height: 119%;
+      background-color: rgba(57, 231, 255, 0.35);
+      transform-origin: right bottom;
+      z-index: -1;
+      transform: rotate(20deg);
+
+      @include for-tablet {
+        height: 150%;
+        transform: rotate(14deg);
+      }
+    }
+
     &.active--left::after {
       top: -100%;
       right: 100%;
       left: 0;
       transform: translateX(-100%);
+    }
+
+    &.active--left::before {
+      transform: rotate(-17deg);
+      @include for-tablet {
+        transform: rotate(-13deg);
+      }
     }
   }
 }
@@ -109,8 +135,13 @@
   border: 1px solid rgba(57, 231, 255, 0.35);
   border-radius: 8px;
   background: rgba(22, 7, 67, 0.1);
+  display: none;
 
   font-size: 12px;
+
+  @include for-tablet {
+    display: block;
+  }
 
   @include for-desktop {
     padding-left: 100px;
@@ -130,12 +161,6 @@
 }
 
 .map__list-item {
-  // &:last-child {
-  //   grid-column-start: 1;
-  //   grid-column-end: end;
-  //   grid-row-start: end;
-  //   grid-row-end: -1;
-  // }
   &.active {
     color: $accent-cl;
   }
