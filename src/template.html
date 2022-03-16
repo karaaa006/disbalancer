@@ -205,11 +205,13 @@
           <div class="map">
             <div class="delimiter map__delimiter"></div>
             <div class="map__nav-btns">
-              <button class="map__nav-btn" type="button">+</button>
-              <button class="map__nav-btn" type="button">-</button>
+              <button class="map__nav-btn" type="button" id="plus">+</button>
+              <button class="map__nav-btn" type="button" id="minus">-</button>
             </div>
             <div class="map__wrap">
-              <img src="<%= require('./images/map/map.svg') %>" alt="Map" class="map__img" />
+              <div class="map__image-wrap">
+                <img src="<%= require('./images/map/map.svg') %>" alt="Map" class="map__img" />
+              </div>
             </div>
             <div class="map__list-wrap">
               <ul class="map__list"></ul>
@@ -320,9 +322,9 @@
               <tr>
                 <td class="buy-table__body-cell">Gate.io</td>
                 <td class="buy-table__body-cell">DDOS/USDT</td>
-                <td class="buy-table__body-cell">$0.401175</td>
-                <td class="buy-table__body-cell">$32,056</td>
-                <td class="buy-table__body-cell">?</td>
+                <td class="buy-table__body-cell" id="ddos-usdt-price-gateio">?</td>
+                <td class="buy-table__body-cell" id="ddos-usdt-vol-gateio">?td></td>
+                <td class="buy-table__body-cell" id="ddos-usdt-vol-percentage-gateio">?</td>
                 <td class="buy-table__body-cell">
                   <a
                     target="_blank"
@@ -334,10 +336,10 @@
               </tr>
               <tr>
                 <td class="buy-table__body-cell">Pancakeswap (V2)</td>
-                <td class="buy-table__body-cell">DDOS/ETH Info</td>
-                <td class="buy-table__body-cell">$0.401175</td>
-                <td class="buy-table__body-cell">$7,530</td>
-                <td class="buy-table__body-cell">?</td>
+                <td class="buy-table__body-cell">DDOS/ETH</td>
+                <td class="buy-table__body-cell" id="ddos-eth-price">?</td>
+                <td class="buy-table__body-cell" id="ddos-eth-vol">?d></td>
+                <td class="buy-table__body-cell" id="ddos-eth-vol-percentage">?</td>
                 <td class="buy-table__body-cell">
                   <a
                     target="_blank"
@@ -350,9 +352,9 @@
               <tr>
                 <td class="buy-table__body-cell">uniswap (V2)</td>
                 <td class="buy-table__body-cell">DDOS/USDT</td>
-                <td class="buy-table__body-cell">$0.401175</td>
-                <td class="buy-table__body-cell">$32,056</td>
-                <td class="buy-table__body-cell">?</td>
+                <td class="buy-table__body-cell" id="ddos-usdt-price-uniswap">?</td>
+                <td class="buy-table__body-cell" id="ddos-usdt-vol-uniswap">?td></td>
+                <td class="buy-table__body-cell" id="ddos-usdt-vol-percentage-uniswap">?</td>
                 <td class="buy-table__body-cell">
                   <a
                     target="_blank"
