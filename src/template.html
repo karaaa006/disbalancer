@@ -12,7 +12,9 @@
     <div class="hero">
       <header class="header">
         <div class="header__logo">
-          <img src="<%= require('./images/logo-mob.svg') %>" />
+          <a href="https://disbalancer.com/">
+            <img src="<%= require('./images/logo-mob.svg') %>" />
+          </a>
         </div>
         <div class="header__mob-menu-btn">
           <button type="button" class="icon-btn" data-toggle-menu>
@@ -313,9 +315,6 @@
                   <div class="buy-table__head-text-wrap">Price</div>
                 </th>
                 <th class="buy-table__head-cell">
-                  <div class="buy-table__head-text-wrap">Volume</div>
-                </th>
-                <th class="buy-table__head-cell">
                   <div class="buy-table__head-text-wrap">Volume,%</div>
                 </th>
               </tr>
@@ -323,7 +322,6 @@
                 <td class="buy-table__body-cell">Gate.io</td>
                 <td class="buy-table__body-cell">DDOS/USDT</td>
                 <td class="buy-table__body-cell" id="ddos-usdt-price-gateio">?</td>
-                <td class="buy-table__body-cell" id="ddos-usdt-vol-gateio">?td></td>
                 <td class="buy-table__body-cell" id="ddos-usdt-vol-percentage-gateio">?</td>
                 <td class="buy-table__body-cell">
                   <a
@@ -338,7 +336,6 @@
                 <td class="buy-table__body-cell">Pancakeswap (V2)</td>
                 <td class="buy-table__body-cell">DDOS/ETH</td>
                 <td class="buy-table__body-cell" id="ddos-eth-price">?</td>
-                <td class="buy-table__body-cell" id="ddos-eth-vol">?d></td>
                 <td class="buy-table__body-cell" id="ddos-eth-vol-percentage">?</td>
                 <td class="buy-table__body-cell">
                   <a
@@ -353,7 +350,6 @@
                 <td class="buy-table__body-cell">uniswap (V2)</td>
                 <td class="buy-table__body-cell">DDOS/USDT</td>
                 <td class="buy-table__body-cell" id="ddos-usdt-price-uniswap">?</td>
-                <td class="buy-table__body-cell" id="ddos-usdt-vol-uniswap">?td></td>
                 <td class="buy-table__body-cell" id="ddos-usdt-vol-percentage-uniswap">?</td>
                 <td class="buy-table__body-cell">
                   <a
